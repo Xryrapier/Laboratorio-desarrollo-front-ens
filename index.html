@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" type="text/css" target="_blank" href="style.css">
+<style type="text/css">
+</style>
+</head>
+<body>
+<table  class="Tabla">
+	<tr>
+		<th class="Lateral"></th>
+		<th class="Columna_de_Formulario">
+      <form class="Campos" name="Formulario" type="text">
+        <h1 class="Encabezado_formulario" contenteditable="">Create Account</h1>
+		  Nombre <br />
+        <input class="Fields" name="Nombre" type="text"
+maxlength="50"/>
+		  <i class="fas fa-exclamation-circle failure-icon"></i>
+		  <i class="far fa-check-circle success-icon"></i>
+        <div class="error"></div>
+	    <br />
+        Email <br />
+        <input class="Fields" type="email" name="Email"
+maxlength="60" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
+	    <i class="fas fa-exclamation-circle failure-icon"></i>
+		  <i class="far fa-check-circle success-icon"></i>
+		  <div class="error"></div>
+		<br />
+        Clave <br />
+        <input class="Fields" type="password" name="Clave" maxlength="8"/>
+		  <i class="fas fa-exclamation-circle failure-icon"></i>
+		  <i class="far fa-check-circle success-icon"></i>
+		  <div class="error"></div>
+	    <br />
+        Confirme su clave<br />
+        <input class="Fields" type="password" name="Confirme su clave" maxlength="8"  />
+		  <i class="fas fa-exclamation-circle failure-icon"></i>
+		  <i class="far fa-check-circle success-icon"></i>
+		  <div class="error"></div>
+		  <br />
+	    <br />
+	    <input class="Send_button" type="submit" value="ENVIAR"/>
+			</form>
+		</th>
+		<th class="lateral"></th>
+	</tr>
+</table>
+</body>
+	<script>
+		let name = (name) => document.getElementsByName(name);
+
+let classes = (classes) => document.getElementsByClassName(classes);
+
+let username = "Nombre",
+    email = "Email",
+    password = "Clave",
+    passwordconfirmation = "Confirme_ su_clave",
+    form = "ENVIAR",
+    errorMsg = "error",
+    //success-icon = classes("success-icon"),eror-icon = classes("error-icon");//
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    let engine = ("Nombre", 0, "Nombre este campo no puede quedar en blanco");
+    let engine(Email, 1, "Email este campo no puede quedar en blanco");
+    let engine(Clave, 2, "Clave este campo no puede quedar en blanco");
+	let engine(Confirme_su_clave, 3, "Confirme_su_clave este campo no puede quedar en blanco");
+	});
+
+let engine = (id, serial, message) => {
+    if (id.value.trim() === "") {
+        errorMsg[serial].innerHTML = message;
+        id.style.border = "2px solid red";
+
+        // icons
+        error-icon[serial].style.opacity = "1";
+        success-icon[serial].style.opacity = "0";
+    } else {
+        errorMsg[serial].innerHTML = "";
+        id.style.border = "2px solid green";
+
+        // icons
+        error-icon[serial].style.opacity = "0";
+        success-icon[serial].style.opacity = "1";
+    }
+};</script>
+</html>

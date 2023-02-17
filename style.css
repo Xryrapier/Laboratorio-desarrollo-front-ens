@@ -1,0 +1,62 @@
+/* CSS Document */
+		body {
+			color: #ABB9DE;
+			background-color: #252932;
+		}
+.Tabla {
+	background-color: #252932;
+	height: auto;
+	width: 100%;
+	align-self: center;
+		}
+.Columna_de_Formulario{
+	width: 33%;
+	background-color: #2F3744;
+	border-radius: 8px;
+	align-self: left;
+	border:2px solid #373E50;
+		}
+.Lateral{
+	background-color:#252932;
+	border-radius: 6px;
+	width: 33%;
+	align-items: center;
+}		
+.Encabezado_formulario {
+    font-family: 'Poppins';
+	font-size-adjust: auto;
+    text-align: left;
+	font-weight: bolder;
+}
+.Campos {
+    font-size: 11px;
+    font-family: 'Poppins';
+    text-align: left;
+	margin: 5%;
+	width: 90%
+}
+.Fields {
+    align-self: center;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	border-radius: 4px;
+	width: 95%;
+	margin-top: 5px;
+	padding: 6px
+}
+.Send_button {
+    color:#FFFFFF;
+	text-align: center;
+	align-self: center;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	border-radius: 4px;
+	border-color: #2A2A2A;
+	transition-duration: 0.4s;
+	background-color: #6C63FE;
+	width: 100%;
+	padding: 10px;
+}
+.error-icon{
+	image: url("error-icon.svg");
+	align-items: flex-end;
+	padding-right: 9;
+}
